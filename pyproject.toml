@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "functional-expert"
+version = "1.0.0"
+description = "Functional Expert MCP server using LangGraph"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "modelcontextprotocol",
+    "langgraph>=0.2.0",
+    "langchain>=0.2.0",
+    "langchain-openai>=0.1.0",
+    "faiss-cpu",
+    "gitpython",
+    "python-dotenv"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio",
+    "pytest-cov",
+    "coverage",
+    "ruff",
+    "mypy",
+    "black",
+    "pre-commit"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-ra -q --cov=."
+testpaths = [
+    "tests"
+]
+
+[tool.coverage.run]
+branch = true
+source = ["services", "graph"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true

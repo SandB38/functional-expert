@@ -1,0 +1,5 @@
+{
+  "code_repo_path": "C:/ABSOLUTE/PATH/TO/YOUR/CODE/REPO",
+  "spec_repo_path": "C:/ABSOLUTE/PATH/TO/YOUR/SPEC/REPO",
+  "openai_api_key": "YOUR_OPENAI_KEY"
+}
