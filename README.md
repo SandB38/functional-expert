@@ -6,7 +6,7 @@
 2. Edit config.json with absolute paths and OpenAI key
 3. Install dependencies:
 
-   pip install -r requirements.txt
+   pip install .
 
 4. Run server:
 
@@ -33,13 +33,12 @@ Restart VS Code.
 To validate the core services you can run the automated tests using `pytest`. If you don’t have `pytest` installed already, run:
 
 ```powershell
-pip install pytest
+pip install .[dev]
 ```
 
 Then from the project root directory execute:
 
 ```powershell
-cd c:\Users\T0043336\project\functional-mcp-langgraph-ready\functional-mcp-langgraph
 pytest -q
 ```
 

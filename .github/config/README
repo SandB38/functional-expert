@@ -1,0 +1,7 @@
+
+# Configuration
+
+## MCP config
+Copy the `.config/mcp.json.template` file into the specific config location and replace `YOUR_API_KEY` by your api key:
+- for VScode `.vscode/mcp.json`
+- for IntelliJ `.idea/mcp.json`
